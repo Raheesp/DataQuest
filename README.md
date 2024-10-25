@@ -35,8 +35,8 @@ To run DataQuest, the following libraries are required:
 
 ### Step 1: Clone the Repository
 ```bash
-[git clone https://github.com/your-username/AIplot.git](https://github.com/Raheesp/DataQuest.git)
-cd AIplot
+[git clone https://github.com/Raheesp/DataQuest.git](https://github.com/Raheesp/DataQuest.git)
+cd DataQuest
 ```
 
 ### Step 2: Create and Activate a Virtual Environment
