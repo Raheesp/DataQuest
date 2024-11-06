@@ -3,12 +3,23 @@ import plotly.express as px
 import pandas as pd
 import nltk
 from pathlib import Path
+from langchain.vectorstores import FAISS
+from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain.llms import OpenAI
+from langchain.chains import ConversationalRetrievalChain
+from langchain.llms import LlamaCpp 
+from langchain.embeddings import HuggingFaceBgeEmbeddings 
+from langchain.embeddings import HuggingFaceEmbeddings 
+from langchain.chat_models import ChatOpenAI
 from streamlit_option_menu import option_menu
 from threading import Thread, Event
 from utils import generate_insights, speak_insights, stop_event
+from langchain.memory import ConversationBufferMemory
+from langchain.document_loaders.csv_loader import CSVLoader
 import os
 import tempfile
 from streamlit_chat import message
+from langchain.llms import CTransformers
 from pandasai import SmartDataframe # SmartDataframe for interacting with data using LLM
 from pandasai.llm.local_llm import LocalLLM
 
@@ -29,11 +40,11 @@ def load_llm():
 
 def streamlit_ui():
     with st.sidebar:
-        choice = option_menu('Navigation', ['Home', 'Data analysis'], default_index=0)
+        choice = option_menu('Navigation', ['Home', 'Data analysis','Chat with LLM'], default_index=0)
 
     if choice == 'Home':
-        st.title("Hi, Welcome to DataQuest \n We Make Data Exploration Easier Using LLM")
-        st.video("the stream.mp4")
+        st.title("Hi, Welcome to AIplot \n Where you can Analyse Data and Also Communicate with the Document")
+        st.video("./AIplot.mp4")
 
     elif choice == 'Data analysis':
         st.title("Data Analysis Dashboard")
@@ -78,6 +89,17 @@ def streamlit_ui():
                     st.info("Your Query: "+ input_text)
                     result = chat_with_csv(data,input_text)
                     st.success(result)
+
+    elif choice == "Chat with LLM":
+        from langchain_community.llms import Ollama 
+        llm = Ollama(model="llama3:latest")
+        st.title("Chatbot using Llama3")
+        prompt = st.text_area("Enter your prompt:")
+
+        if st.button("Generate"):
+            if prompt:
+                with st.spinner("Generating response..."):
+                    st.write_stream(llm.stream(prompt, stop=['<|eot_id|>']))
 
                             
 
