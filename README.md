@@ -1,7 +1,6 @@
 # DataQuest : Conversational Data Analysis with Streamlit and PandasAI
 
-https://github.com/user-attachments/assets/1bdd9a41-058d-4466-a1ef-1d6142fbd77d.mp4
-
+![the stream (1)](https://github.com/user-attachments/assets/b74b554b-aa5c-44f6-9c8f-960c1c7ba73a)
 ![Screenshot 2024-11-11 131434](https://github.com/user-attachments/assets/dbfe1e33-d38d-48ac-ab6d-eb24de2efe14)
 ![Screenshot 2024-11-11 132148](https://github.com/user-attachments/assets/02942df5-77f9-46bd-8f61-971cfd270a24)
 ![Screenshot 2024-11-11 131125](https://github.com/user-attachments/assets/c09aa22e-4717-41d0-84fc-085df26b16b1)
