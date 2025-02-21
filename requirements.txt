@@ -13,6 +13,6 @@ pyttsx3
 wikipedia-api
 speechrecognition
 setuptools
-
+pyyaml 
 
 
