@@ -15,4 +15,5 @@ setuptools
 pyyaml 
 nltk
 wikipedia
-pyttsx3
+gtts
+
