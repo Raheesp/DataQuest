@@ -1,5 +1,5 @@
 pip==25.0.1 --no-cache-dir
-numpy>=1.23.5,<1.26  # PandasAI requires a stable NumPy version
+numpy>=1.23.5,<1.26
 pandas>=1.5.3
 pandasai==1.6.0
 ollama>=0.1.7
@@ -12,8 +12,5 @@ plotly
 pyttsx3
 wikipedia-api
 speechrecognition
-rich==13.9.4
-markdown-it-py==3.0.0
-pygments==2.19.1
-mdurl==0.1.2
+
 
