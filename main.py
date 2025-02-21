@@ -24,7 +24,7 @@ def streamlit_ui():
         st.title("Hi, Welcome to DataQuest \n Where you can Analyse Data and Also Communicate with the Document")
         st.video("./the stream.mp4")
 
-    elif choice == 'Data analysis':
+    elif choice == 'Data Analysis':
         st.title("Data Analysis Dashboard")
                 # Function to chat with CSV data
         def chat_with_csv(df,query):
