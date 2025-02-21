@@ -15,4 +15,4 @@ speechrecognition
 setuptools
 pyyaml 
 nltk
-
+wikipedia
