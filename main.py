@@ -27,7 +27,7 @@ def streamlit_ui():
     elif choice == 'Data analysis':
         st.title("Data Analysis Dashboard")
                 # Function to chat with CSV data
-        def chat_with_csv(df,query):
+         def chat_with_csv(df,query):
             # Initialize LocalLLM with Meta Llama 3 model
             llm = LocalLLM(
             api_base="http://localhost:11434/v1",
