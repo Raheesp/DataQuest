@@ -9,7 +9,6 @@ from utils import generate_insights, speak_insights, stop_event
 import os
 import tempfile
 from streamlit_chat import message
-from langchain.llms import CTransformers
 from pandasai import SmartDataframe # SmartDataframe for interacting with data using LLM
 from pandasai.llm.local_llm import LocalLLM
 
