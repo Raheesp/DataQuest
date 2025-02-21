@@ -1,5 +1,6 @@
 pip==25.0.1
 numpy>=1.23.5,<1.26
+distutils
 pandas>=1.5.3
 pandasai>=1.6.0
 ollama>=0.1.7
