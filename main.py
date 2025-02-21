@@ -44,7 +44,7 @@ def streamlit_ui():
 
     if choice == 'Home':
         st.title("Hi, Welcome to AIplot \n Where you can Analyse Data and Also Communicate with the Document")
-        st.video("./AIplot.mp4")
+        st.video("./the stream.mp4")
 
     elif choice == 'Data analysis':
         st.title("Data Analysis Dashboard")
