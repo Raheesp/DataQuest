@@ -3,19 +3,9 @@ import plotly.express as px
 import pandas as pd
 import nltk
 from pathlib import Path
-from langchain.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.llms import OpenAI
-from langchain.chains import ConversationalRetrievalChain
-from langchain.llms import LlamaCpp 
-from langchain.embeddings import HuggingFaceBgeEmbeddings 
-from langchain.embeddings import HuggingFaceEmbeddings 
-from langchain.chat_models import ChatOpenAI
 from streamlit_option_menu import option_menu
 from threading import Thread, Event
 from utils import generate_insights, speak_insights, stop_event
-from langchain.memory import ConversationBufferMemory
-from langchain.document_loaders.csv_loader import CSVLoader
 import os
 import tempfile
 from streamlit_chat import message
