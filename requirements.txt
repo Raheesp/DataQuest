@@ -1,4 +1,4 @@
-pip==25.0.1
+pip==25.0.1 --no-cache-dir
 numpy>=1.23.5,<1.26  # PandasAI requires a stable NumPy version
 pandas>=1.5.3
 pandasai==1.6.0
