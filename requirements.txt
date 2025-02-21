@@ -9,7 +9,6 @@ streamlit>=1.29.0
 streamlit_chat
 streamlit_option_menu
 plotly
-pyttsx3
 wikipedia-api
 speechrecognition
 setuptools
