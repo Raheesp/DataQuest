@@ -1,12 +1,12 @@
 import wikipedia
-import pyttsx3
 import nltk
+from gtts import gTTS
+import os
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from threading import Event, Thread
 
 nltk.download('vader_lexicon')
 sia = SentimentIntensityAnalyzer()
-engine = pyttsx3.init()
 stop_event = Event()
 
 def search_wikipedia(query):
@@ -32,21 +32,18 @@ def analyze_text(text):
 
 def speak(text):
     if not stop_event.is_set():
-        def run_engine():
-            engine.say(text)
-            engine.runAndWait()
-        Thread(target=run_engine).start()
+        tts = gTTS(text=text, lang='en')
+        tts.save("insights.mp3")
+        os.system("mpg321 insights.mp3")  # Works on Linux (including Streamlit Cloud)
+        # On Windows: use playsound("insights.mp3")
 
 def speak_insights(insights):
     if stop_event.is_set():
         return
-    def run_engine():
-        for insight in insights:
-            if stop_event.is_set():
-                break
-            engine.say(insight)
-            engine.runAndWait()
-    Thread(target=run_engine).start()
+    for insight in insights:
+        if stop_event.is_set():
+            break
+        speak(insight)  # Call `speak` function for each insight
 
 def generate_insights(df):
     insights = []
@@ -57,3 +54,4 @@ def generate_insights(df):
         std_val = df[col].std()
         insights.append(f"Column '{col}' - Mean: {mean_val:.2f}, Median: {median_val:.2f}, Standard Deviation: {std_val:.2f}.")
     return insights
+
