@@ -16,3 +16,4 @@ setuptools
 pyyaml 
 nltk
 wikipedia
+espeak
