@@ -1,8 +1,14 @@
 streamlit
 plotly
 pandas
-nltk
 pyttsx3
 wikipedia-api
 SpeechRecognition
 pandasai
+streamlit_chat
+streamlit_option_menu 
+threading
+os
+tempfile
+pandasai
+pandasai.llm.local_llm
