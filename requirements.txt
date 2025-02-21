@@ -16,4 +16,4 @@ pyyaml
 nltk
 wikipedia
 gtts
-
+langchain_community
