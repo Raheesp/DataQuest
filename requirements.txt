@@ -1,25 +1,19 @@
 pip==25.0.1
-plotly
-pyttsx3
-wikipedia-api
-SpeechRecognition
-pandasai
-streamlit_chat
-streamlit_option_menu 
-threading
-os
-tempfile
-pandasai
-pandasai.llm.local_llm
-rich==13.9.4
-markdown-it-py==3.0.0
-pygments==2.19.1
-mdurl==0.1.2
 numpy>=1.23.5,<1.26  # PandasAI requires a stable NumPy version
 pandas>=1.5.3
-pandasai>=1.6.0
+pandasai==1.6.0
 ollama>=0.1.7
 duckdb>=0.8.1
 tiktoken>=0.5.1
 streamlit>=1.29.0
+streamlit_chat
+streamlit_option_menu
+plotly
+pyttsx3
+wikipedia-api
+speechrecognition
+rich==13.9.4
+markdown-it-py==3.0.0
+pygments==2.19.1
+mdurl==0.1.2
 
