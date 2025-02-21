@@ -14,5 +14,5 @@ wikipedia-api
 speechrecognition
 setuptools
 pyyaml 
-
+nltk
 
