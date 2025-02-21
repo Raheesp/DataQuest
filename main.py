@@ -16,17 +16,6 @@ DB_FAISS_PATH = "vectorstore/db_faiss"
 
 
 
-
-def load_llm():
-    # Load the locally downloaded model here
-    llm = CTransformers(
-        model = "llama-2-7b-chat.ggmlv3.q8_0.bin",
-        model_type="llama",
-        max_new_tokens = 512,
-        temperature = 0.0
-    )
-    return llm
-
 def streamlit_ui():
     with st.sidebar:
         choice = option_menu('Navigation', ['Home', 'Data analysis','Chat with LLM'], default_index=0)
