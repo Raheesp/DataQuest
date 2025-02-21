@@ -1,7 +1,7 @@
-pip==25.0.1 --no-cache-dir
+pip==25.0.1
 numpy>=1.23.5,<1.26
 pandas>=1.5.3
-pandasai==1.6.0
+pandasai>=1.6.0
 ollama>=0.1.7
 duckdb>=0.8.1
 tiktoken>=0.5.1
