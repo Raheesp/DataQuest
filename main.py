@@ -21,7 +21,7 @@ def streamlit_ui():
         choice = option_menu('Navigation', ['Home', 'Data analysis','Chat with LLM'], default_index=0)
 
     if choice == 'Home':
-        st.title("Hi, Welcome to AIplot \n Where you can Analyse Data and Also Communicate with the Document")
+        st.title("Hi, Welcome to DataQuest \n Where you can Analyse Data and Also Communicate with the Document")
         st.video("./the stream.mp4")
 
     elif choice == 'Data analysis':
