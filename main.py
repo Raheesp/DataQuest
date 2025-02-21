@@ -18,7 +18,7 @@ DB_FAISS_PATH = "vectorstore/db_faiss"
 
 def streamlit_ui():
     with st.sidebar:
-        choice = option_menu('Navigation', ['Home', 'Data analysis','Chat with LLM'], default_index=0)
+        choice = option_menu('Navigation', ['Home', 'Data Analysis','Chat with LLM'], default_index=0)
 
     if choice == 'Home':
         st.title("Hi, Welcome to DataQuest \n Where you can Analyse Data and Also Communicate with the Document")
