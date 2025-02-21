@@ -12,6 +12,7 @@ plotly
 pyttsx3
 wikipedia-api
 speechrecognition
+setuptools
 
 
 
